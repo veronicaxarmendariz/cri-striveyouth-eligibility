@@ -39,7 +39,7 @@ var MapsLib = {
   //NOTE: if your location column name has spaces in it, surround it with single quotes
   //example: locationColumn:     "'my location'",
   //if your Fusion Table has two-column lat/lng data, see https://support.google.com/fusiontables/answer/175922
-  locationColumn:     "Lat",
+  locationColumn:     "Address",
 
   map_centroid:       new google.maps.LatLng(41.7682,-72.684), //center that your map defaults to
   locationScope:      "connecticut",      //geographical area appended to all address searches
@@ -62,7 +62,7 @@ var MapsLib = {
       styles: [
         {
           stylers: [
-            { saturation: -100 }, // MODIFY Saturation and Lightness if needed
+            { saturation: 0 }, // MODIFY Saturation and Lightness if needed
             { lightness: 40 }     // Current values make thematic polygon shading stand out over base map
           ]
         }
