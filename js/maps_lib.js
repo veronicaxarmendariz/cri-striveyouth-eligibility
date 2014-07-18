@@ -28,8 +28,8 @@ var MapsLib = {
   //NOTE: numeric IDs will be depricated soon
   fusionTableId:      "1AyFvnImDJjN98c9UmlC5CI0S027W_iMjVyGFpGB8", //Point data layer
   
-  polygon1TableID:    "1ceippR4giBiF-pT9PE1YAUvebFp6_NKvYriccYo", //Outline map layer of CT town boundaries
-  polygon2TableID:    "1VopQGBhRKyyk25EIA5ptScvULxR68d43RhZ1ycM", //Thematic map layer of selected CT school districts
+  polygon1TableID:    "104XWgAaVbeNTWbWdwXQ0AI8gQwCFTGqP5BRvQqaO", //Outline map layer of CT town boundaries
+  polygon2TableID:    "1HnxyY1GGDmLYvaxiLCKg4bLBnepE1PZ-9TMa7o1K", //Thematic map layer of selected CT school districts
 
   //*MODIFY Fusion Tables Requirement* API key. found at https://code.google.com/apis/console/
   //*Important* this key is for demonstration purposes. please register your own.
