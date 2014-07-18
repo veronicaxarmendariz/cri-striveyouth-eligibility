@@ -28,8 +28,7 @@ var MapsLib = {
   //NOTE: numeric IDs will be depricated soon
   fusionTableId:      "1AyFvnImDJjN98c9UmlC5CI0S027W_iMjVyGFpGB8", //Point data layer
   
-  polygon1TableID:    "104XWgAaVbeNTWbWdwXQ0AI8gQwCFTGqP5BRvQqaO", //Outline map layer of CT town boundaries
-  polygon2TableID:    "1HnxyY1GGDmLYvaxiLCKg4bLBnepE1PZ-9TMa7o1K", //Thematic map layer of selected CT school districts
+  polygon1TableID:    "1A1-0m3DwDMtG5CVicshn6aYJXcv6Ef_s03Kd_WYm", //Outline map layer of CT town boundaries
 
   //*MODIFY Fusion Tables Requirement* API key. found at https://code.google.com/apis/console/
   //*Important* this key is for demonstration purposes. please register your own.
@@ -91,15 +90,6 @@ var MapsLib = {
       templateId: 2
     });
 
-    MapsLib.polygon2 = new google.maps.FusionTablesLayer({
-      query: {
-        from:   MapsLib.polygon2TableID,
-        select: "geometry"
-      },
-      styleId: 2,
-      templateId: 2
-    });
-
     //reset filters
     $("#search_address").val(MapsLib.convertToPlainString($.address.parameter('address')));
     var loadRadius = MapsLib.convertToPlainString($.address.parameter('radius'));
@@ -124,9 +114,6 @@ var MapsLib = {
     // MODIFY if needed: shows background polygon layer depending on which checkbox is selected
     if ($("#rbPolygon1").is(':checked')) {
       MapsLib.polygon1.setMap(map);
-    }
-    else if ($("#rbPolygon2").is(':checked')) {
-      MapsLib.polygon2.setMap(map);
     }
 
     var address = $("#search_address").val();
@@ -209,8 +196,6 @@ var MapsLib = {
       MapsLib.searchrecords.setMap(null);
     if (MapsLib.polygon1 != null)
       MapsLib.polygon1.setMap(null);
-    if (MapsLib.polygon2 != null)
-      MapsLib.polygon2.setMap(null);
     if (MapsLib.addrMarker != null)
       MapsLib.addrMarker.setMap(null);
     if (MapsLib.searchRadiusCircle != null)
