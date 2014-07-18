@@ -26,7 +26,7 @@ var MapsLib = {
 
   //MODIFY the encrypted Table IDs of your Fusion Tables (found under File => About)
   //NOTE: numeric IDs will be depricated soon
-  fusionTableId:      "1rg_rjG8aVM6Sdp52qBx08xZipbJy95cCgdAKH6Fx", //Point data layer
+  fusionTableId:      "1AyFvnImDJjN98c9UmlC5CI0S027W_iMjVyGFpGB8", //Point data layer
   
   polygon1TableID:    "1ceippR4giBiF-pT9PE1YAUvebFp6_NKvYriccYo", //Outline map layer of CT town boundaries
   polygon2TableID:    "1VopQGBhRKyyk25EIA5ptScvULxR68d43RhZ1ycM", //Thematic map layer of selected CT school districts
@@ -137,14 +137,9 @@ var MapsLib = {
   //-----custom filters for point data layer
     //---MODIFY column header and values below to match your Google Fusion Table AND index.html
     //-- TEXTUAL OPTION to display legend and filter by non-numerical data in your table
-    var type_column = "'Program Type'";  // -- note use of single & double quotes for two-word column header
+    var type_column = "'Type'";  // -- note use of single & double quotes for two-word column header
     var tempWhereClause = [];
-    if ( $("#cbType1").is(':checked')) tempWhereClause.push("Interdistrict");
-    if ( $("#cbType2").is(':checked')) tempWhereClause.push("District");
-    if ( $("#cbType3").is(':checked')) tempWhereClause.push("MorePreK");
-    if ( $("#cbType4").is(':checked')) tempWhereClause.push("Health");
-    if ( $("#cbType5").is(':checked')) tempWhereClause.push("Shops");
-    if ( $("#cbType6").is(':checked')) tempWhereClause.push("Childcare Services");
+    if ( $("#cbType1").is(':checked')) tempWhereClause.push("Office");
     whereClause += " AND " + type_column + " IN ('" + tempWhereClause.join("','") + "')";
 
     //-- NUMERICAL OPTION - to display and filter a column of numerical data in your table, use this instead
